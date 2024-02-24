@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .parent {
+            border: 1px solid red;
+        }
+
+        .parent p {
+            font-family: cursive;
+        }
+
+        .parent img {
+            width: 45%;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display"></div>
+    <script>
+        //making a request to backend
+        fetch("https://reqres.in/api/users?page=2")
+            //getting response back from fetch
+            .then(function (res) {
+                console.log(res)
+                //converting and returning the response into json format
+                return res.json()
+            })
+            //getting the new response in object format
+            .then(function (resJson) {
+                //displaying the object
+                console.log(resJson)
+                // for calling the function data we should use showdata and call it using the ".data"
+                // for calling the below function showData here we are using it
+                showData(resJson.data)
+            })
+        function showData(employees) {
+            console.log("employees details", employees)
+            for (i = 0; i < employees.length; i++) {
+                // we are using + for iteration to get next employee details and ` for to convert html to script
+                document.getElementById("display").innerHTML += `
+                <div class="parent">
+                    <p>Name is:${employees[i].first_name}</p>
+                    <p>Email is:${employees[i].email}</p>
+                    <img src="${employees[i].avatar}" width="10%">
+                </div>
+            `
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

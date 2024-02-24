@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rough for JS</title>
+</head>
+
+<body>
+    <!-- <p>Name is: <span>Bhaskar</span></p>
+    <script>
+        var mySelf = {
+            name: "S.Bhaskar Pradeep",
+            age: 22,
+            gender: "male",
+            address: "40-408/506 sree srinivasa classic"
+
+        };
+        console.log(mySelf)
+
+    </script>
+    <script>
+        var cricketers = [
+            { name: "Dhoni", age: 42, familycount: 3 },
+            { name: "virat", age: 37, familycount: 3 },
+            { name: "Rohit sharma", age: 36, familycount: 4, daughtername: "vamika" },
+            { name: "hardik", age: 30, familycount: 3 },
+        ]
+
+        console.log(cricketers)
+        console.log(cricketers[2])
+        console.log(cricketers[2].daughtername)
+    </script> -->
+
+    <!-- <script>
+        var s=2;
+        while(s<=20){
+            console.log(s)
+            s++
+        }
+       
+        for (var s=1;s<=10;s++){
+            console.log("bhaskar")
+        }
+    </script> -->
+
+    <!-- <script>
+        var checkNumber="98";
+        if(checkNumber%2==0){
+            console.log("it is even")
+        }
+        else if(checkNumber%2==1){
+            console.log("it is odd")
+        }
+        else{
+            console.log("not a number")
+        }
+        var a=alert("You are in danger")
+         var p=prompt("Enter a number")
+         console.log(p)
+        var c=confirm("are you an adult??")
+        console.log(c)
+        if(c){
+            console.log("Welcome user")
+        }
+
+        else{
+            console.log("not a valid user")
+        }
+        var checkNumber = (prompt("Enter a number to check even or odd"))
+        if (checkNumber % 2 == 0) {
+            console.log("it is even")
+        }
+        else if (checkNumber % 2 == 1) {
+            console.log("it is odd")
+        }
+        else {
+            console.log("not a number")
+        }
+        var a=[23,56,8,12,956,78]
+        console.log(a)
+        a.push(99,100,8.7)  // adds at last position
+        console.log(a)
+        a.pop()    // deletes at last position
+        console.log(a)
+        a.unshift(45,8,9.63)   // adds at first position
+        console.log(a)
+        a.shift()  // deletes at first position
+        console.log(a)
+        a.splice(3,0,"Codegnan") // based on position performs both add and delete at a time on diff positions
+        //splice(position,number of values u want to delete,values you want to add)
+        console.log(a)
+    </script> -->
+
+    <!-- <script>
+        var pList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@$#&", password = [];
+        for (i = 1; i <= 8; i++) {
+            var rannmbr = Math.floor(Math.random() * pList.length)
+            console.log(rannmbr)
+            password.push(pList.charAt(rannmbr))
+        }
+        console.log("before", password)
+        password = password.join('')
+        console.log(password)
+        
+
+    </script> -->
+    <!-- <button onclick="demo()">submit</button>
+    <script>
+        function demo(){
+            alert("you will receive a OTP")
+        }
+    </script> -->
+    <!-- <script>
+        function abc(){
+            console.log("I am from functions document")
+        }
+        abc()
+
+        function add2nmbrs(x,y,c){
+            console.log(x+y+c)
+        }
+
+        add2nmbrs(34,34,20)
+    </script> -->
+
+    <!-- <script>
+        function addition(a,c){
+            return a*c
+
+        }
+        var res=addition(8,8)
+        console.log(res)
+    </script> -->
+
+    <!-- <script>
+        var a="javascript"
+        function show(){
+            a=1234
+            console.log(a)
+        }
+        show()
+
+        console.log(a)
+
+
+    </script> -->
+    <form action="">
+        <p>
+            <input type="text" id="name" placeholder="Enter name:">
+        </p>
+        <p>
+            <input type="text" id="phoneno" placeholder="Enter phone no:">
+        </p>
+        <p>
+            <input type="text" id="email" placeholder="Enter email id:">
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value
+            // .value is used for input values and .innerHTML for other html values
+            var phoneNumber = document.getElementById("phonenumber").value
+            var email = document.getElementById("email").value
+            var nameCheck = /^[a-zA-Z ]+$/
+            var phoneNumberCheck = /^[0-9]{10}$/
+            var emailCheck = /^[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}$/
+            //   codegnan     @gmail  . com
+            if (name == "" || name.length < 3) {
+                alert("Please check your name")
+                return false
+            }
+            if (!name.match(nameCheck)) {
+                alert("name must carry alphabets")
+                return false
+            }
+            if (!phoneNumber.match(phoneNumberCheck)) {
+                alert("Phone number must carry 10 digits")
+                return false
+
+            }
+
+            if (!email.match(emailCheck)) {
+                alert("Check your Email ID")
+                return false
+            }
+            return true
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

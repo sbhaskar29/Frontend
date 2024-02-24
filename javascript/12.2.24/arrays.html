@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [23, 56, 8, 12, 956, 78]
+        console.log(a)
+        a.push(99, 100)  // adds at last position
+        console.log(a)
+        a.pop(22, 54)    // deletes at last position
+        console.log(a)
+        a.unshift(45)   // adds at first position
+        console.log(a)
+        a.shift(47, 56)  // deletes at first position
+        console.log(a)
+
+
+        a.splice(3, 2, "Codegnan") // based on position performs both add and delete at a time on diff positions
+        //splice(position,number of values u want to delete,values you want to add)
+        console.log(a)
+    </script>
+    <script>
+        console.log(Math.ceil(12.1))
+        console.log(Math.floor(12.9))
+        console.log(Math.random())
+        console.log(Math.pow(24, 4))
+        console.log(Math.round(12.1))
+        console.log(Math.round(12.5))
+    </script>
+
+    <script>
+        var pList = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@$#&", password = [];
+        for (i = 1; i <= 8; i++) {
+            var rnmbr = Math.floor(Math.random() * pList.length)
+            //console.log(rnmbr)
+            password.push(pList.charAt(rnmbr))
+        }
+        console.log("before", password)
+        password = password.join('')
+        console.log(password)
+
+
+    </script>
+    <button onclick="demo()">submit</button>
+    <script>
+        function demo() {
+            alert()
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <p id="access">good</p>
+    <p>Name is: <span id="username"></span></p>
+    <p><input type="text" placeholder="Enter name" id="name"></p>
+    <button onclick="demo()">Submit</button>
+    <script>
+        function demo(){
+            var name=document.getElementById("name").value  
+
+            console.log(name)
+            var newInput=document.createElement("input")
+            document.body.append(newInput)
+            // var listOfClasses=document.getElementByClassName("list")
+            // console.log(listOfClasses)
+            // console.log(listOfClasses[1].innerHTML)
+            // var listOfFruits=document.getElementsByTagName("li")
+            // console.log(listOfFruits)
+
+
+
+            // var username=prompt("Enter your name")
+            // document.getElementById("username").innerHTML=username
+            // console.log(username)
+                // var s=document.getElementById("access").innerHTML
+                // console.log(s)
+        }
+    </script>
+
+    
+</body>
+</html>

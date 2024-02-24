@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validate()">
+        <p>
+            <input type="text" id="name" placeholder="Enter name:">
+        </p>
+        <p>
+            <input type="text" id="phonenumber" placeholder="Enter phone number:">
+        </p>
+        <p>
+            <input type="text" id="email" placeholder="Enter email ID">
+        </p>
+        <button>Submit</button>
+
+    </form>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value
+            // .value is used for input values and .innerHTML for other html values
+            var phoneNumber = document.getElementById("phonenumber").value
+            var email = document.getElementById("email").value
+            var nameCheck = /^[a-zA-Z ]+$/
+            var phoneNumberCheck = /^[0-9]{10}$/
+            var emailCheck = /^[a-zA-Z0-9.]+@[a-z]+\.[a-z]{2,3}$/
+            //   codegnan     @gmail  . com
+            if (name == "" || name.length < 3) {
+                alert("Please check your name")
+                return false
+            }
+            if (!name.match(nameCheck)) {
+                alert("name must carry alphabets")
+                return false
+            }
+            if (!phoneNumber.match(phoneNumberCheck)) {
+                alert("Phone number must carry 10 digits")
+                return false
+
+            }
+            
+            if (!email.match(emailCheck)) {
+                alert("Check your Email ID")
+                return false
+            }
+            return true
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

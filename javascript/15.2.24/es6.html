@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart=[{name:"car",price:70000,productCompany:"Ferrari"},
+        {name:"bike",price:35000,productCompany:"Honda"},
+        {name:"grinder",price:17000,productCompany:"Butterfly"},
+        {name:"tv",price:87000,productCompany:"Sony"},]
+        console.log(cart)
+        cart=cart.filter(function(s){
+            return s.price!=70000
+        })
+        console.log(cart)
+        cart.map(function(r){
+            console.log(r.productCompany)
+        })
+
+
+
+        var arr=[23,33,2,6,3,8,93],duplicate=[]
+        console.log(arr)
+        // console.log(arr[0],arr[1],arr[2],arr[3],arr[4])
+        // for(i=0;i<arr.length;i++){
+        //     duplicate[i]=arr[i]+10
+        // }
+        // console.log(duplicate)
+        duplicate=arr.map(function(i){
+            //console.log(i)
+            return i+10
+        })
+        console.log(duplicate)
+
+        // let a=1000;
+        // a="demo"
+        
+
+    
+    </script>
+    
+</body>
+</html>
